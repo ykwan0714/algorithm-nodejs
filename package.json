@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "start": "APP_ENV=local nodemon run.js"
+    },
+    "devDependencies": {
+        "fs": "^0.0.1-security",
+        "nodemon": "^2.0.15"
+    }
+}
