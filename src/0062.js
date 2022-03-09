@@ -35,9 +35,40 @@ class BinarySearchTree {
       }
     }
   }
-  depthFirstSearchPreOrder() {}
-  depthFirstSearchInOrder() {}
-  depthFirstSearchPostOrder() {}
+  depthFirstSearchPreOrder() {
+    const visited = []
+    const current = this.root
+    const traverse = (node) => {
+      visited.push(node.value)
+      if (node.left) traverse(node.left)
+      if (node.right) traverse(node.right)
+    }
+    traverse(current) // traverse(tree.root)
+    return visited
+  }
+  depthFirstSearchInOrder() {
+    const visited = []
+    const current = this.root
+    const traverse = (node) => {
+      if (node.left) traverse(node.left)
+      visited.push(node.value)
+      if (node.right) traverse(node.right)
+    }
+    traverse(current) // traverse(tree.root)
+    return visited
+  }
+
+  depthFirstSearchPostOrder() {
+    const visited = []
+    const current = this.root
+    const traverse = (node) => {
+      if (node.left) traverse(node.left)
+      if (node.right) traverse(node.right)
+      visited.push(node.value)
+    }
+    traverse(current) // traverse(tree.root)
+    return visited
+  }
 }
 
 module.exports = BinarySearchTree;

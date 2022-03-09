@@ -35,7 +35,18 @@ class BinarySearchTree {
       }
     }
   }
-  breadthFirstSearch() {}
+  breadthFirstSearch() {
+    const visited = []
+    const queue = []
+    queue.push(this.root)
+    while(queue.length) {
+      const node = queue.shift()
+      visited.push(node.value)
+      if (node.left) queue.push(node.left)
+      if (node.right) queue.push(node.right)
+    }
+    return visited
+  }
 }
 
 module.exports = BinarySearchTree;
