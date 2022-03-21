@@ -1,8 +1,12 @@
 class Graph {
   constructor() {
-    this.adjacencyList = {};
+    this.adjacencyList = {}
   }
-  addVertex(vertex) {}
+  addVertex(vertex) {
+    if (!this.adjacencyList[vertex]) {
+      this.adjacencyList[vertex] = []
+    }
+  }
 }
 
-module.exports = Graph;
+module.exports = Graph
