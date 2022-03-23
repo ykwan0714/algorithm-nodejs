@@ -25,5 +25,5 @@ test(`graph.adjacencyList["C"]`, () => {
 });
 
 test(`graph.adjacencyList["D"]`, () => {
-  expect(graph.adjacencyList["D"]).toEqual(expect.objectContaining(["C", "B"]));
+  expect(graph.adjacencyList["D"]).toEqual(expect.objectContaining(["B", "C"]));
 });

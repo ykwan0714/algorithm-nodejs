@@ -17,7 +17,24 @@ class Graph {
       (v) => v !== vertex1
     );
   }
-  breadthFirstSearch(start) {}
+  breadthFirstSearch(start) {
+    const result = []
+    const queue = [start]
+    const visited = {}
+    let currentVertext
+    visited[start] = true
+    while (queue.length) {
+      currentVertext = queue.shift()
+      result.push(currentVertext)
+      this.adjacencyList[currentVertext].forEach((neighbor) => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true
+          queue.push(neighbor)
+        }
+      })
+    }
+    return result
+  }
 }
 
 module.exports = Graph;
