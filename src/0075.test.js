@@ -2,14 +2,14 @@ const WeightedGraph = require("./0075");
 
 const g = new WeightedGraph();
 
-g.addVertext("A");
-g.addVertext("Z");
-g.addVertext("C");
-g.addVertext("D");
-g.addVertext("E");
-g.addVertext("H");
-g.addVertext("Q");
-g.addVertext("G");
+g.addVertex("A");
+g.addVertex("Z");
+g.addVertex("C");
+g.addVertex("D");
+g.addVertex("E");
+g.addVertex("H");
+g.addVertex("Q");
+g.addVertex("G");
 
 g.addEdge("A", "Z", 7);
 g.addEdge("A", "C", 8);
